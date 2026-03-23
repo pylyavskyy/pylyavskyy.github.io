@@ -63,6 +63,12 @@ button:hover {
     padding: 20px;
 }
 
+.section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
 .card {
     padding: 20px;
     border-radius: 12px;
@@ -121,7 +127,7 @@ Play TSP Game
 <h1>Yaroslav Pylyavskyy</h1>
 <p>Data Scientist | PhD Operations Research</p>
 
-<section>
+<section class="section">
 <h2>About Me</h2>
     <div class="about-me">
         <div class="card">Applying Operations Research tools to tackle optimisation problems since 2017. 
@@ -138,7 +144,7 @@ Play TSP Game
     </div>
 </section>
 
-<section>
+<section class="section">
 <h2>Education</h2>
     <div class="education">
         <div class="card">PhD, Management Science — Lancaster University — Oct 2020 - Sep 2025</div>
@@ -148,14 +154,14 @@ Play TSP Game
     </div>
 </section>
 
-<section>
+<section class="section">
 <h2>Honors & Awards</h2>
     <div class="honors">
             <div class="card"><a href="https://www.lancaster.ac.uk/lums/news/boylan-prize-honours-much-missed-professor">Boylan Prize 2025</a></div>
     </div>
 </section>
 
-<section>
+<section class="section">
 <h2>Projects</h2>
     <div class="projects">
             <div class="card"><a href="https://github.com/ahmedkheiri/CoSPLib">Conference Scheduler</a></div>
@@ -163,7 +169,7 @@ Play TSP Game
     </div>
 </section>
 
-<section>
+<section class="section">
 <h2>Publications</h2>
     <div class="projects">
             <div class="card"><a href="https://www.sciencedirect.com/science/article/pii/S0377221724002601?via%3Dihub">A generic approach to conference scheduling with integer programming</a></div>
@@ -174,7 +180,7 @@ Play TSP Game
     </div>
 </section>
 
-<section>
+<section class="section">
 <h2>Interests</h2>
     <div class="interests">
             <div class="card"><a href="https://www.lavlewand.xyz/">Web Development</a></div>
