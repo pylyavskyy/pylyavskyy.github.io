@@ -4,12 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yaroslav Pylyavskyy</title>
 <style>
-    body {
+body {
     font-family: Arial;
     margin: 40px;
     max-width: max-content;
-    background: rgba(255,255,255,0.2);
-    background-color: rgba(255,255,255,0.2);
+    background-color: white;
     color: black;
     
     transition:
@@ -49,7 +48,7 @@ button:hover {
 
 .particle {
     position: absolute;
-    background: white;
+    background: rgba(255,255,255,0.08);
     border-radius: 50%;
     animation: float linear infinite;
 }
@@ -67,7 +66,7 @@ button:hover {
 .card {
     padding: 20px;
     border-radius: 12px;
-    background: rgba(0,0,0,0.05);
+    background: rgba(255,255,255,0.08);
     transition: 0.3s;
 }
 
@@ -205,6 +204,7 @@ function toggleMode() {
         btn.textContent = "🌙";
         localStorage.setItem("theme", "light");
     }
+    updateParticlesColor()
 }
 
     window.addEventListener('load', () => {
@@ -234,6 +234,14 @@ function createParticles() {
 
         container.appendChild(p);
     }
+}
+
+function updateParticlesColor() {
+    const dark = document.body.classList.contains("dark-mode");
+    const particles = document.querySelectorAll(".particle");
+    particles.forEach(p => {
+        p.style.backgroundColor = dark ? "white" : "rgba(255,255,255,0.08)";
+    });
 }
 
 window.onload = function() {
