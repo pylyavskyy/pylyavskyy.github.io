@@ -57,6 +57,47 @@ button:hover {
     background: rgba(255,255,255,0.2);
 }
 
+.container {
+    margin: auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+/* project grid */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.dark-mode .card {
+    background: rgba(255,255,255,0.08);
+}
+
+/* MOBILE BREAKPOINT */
+@media (max-width: 768px) {
+
+    body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 @keyframes float {
     from {
         transform: translateY(100vh);
@@ -99,42 +140,66 @@ button:hover {
     </div>
 </section>
 
+<section>
 <h2>Education</h2>
-<ul>
-<li>PhD, Management Science — Lancaster University</li>
-<li>MSc, Business Analytics — Lancaster University</li>
-<li>BSc, Economic & Regional Development — Panteion University</li>
-<li>Erasmus Exchange — Yeditepe University</li>
-</ul>
+    <div class="education">
+        <ul>
+            <li><div class="card">PhD, Management Science — Lancaster University — Oct 2020 - Sep 2025</div></li>
+            <li><div class="card">MSc, Business Analytics — Lancaster University — Oct 2018 - Sep 2019</div></li>
+            <li><div class="card">BSc, Economic & Regional Development — Panteion University — Sep 2010 - Jan 2015</div></li>
+            <li><div class="card">Erasmus Exchange — Yeditepe University — Feb 2013 - Jun 2013</div></li>
+        </ul>
+    </div>
+</section>
 
+<section>
 <h2>Honors & Awards</h2>
-<ul>
-<li><a href="https://www.lancaster.ac.uk/lums/news/boylan-prize-honours-much-missed-professor">Boylan Prize 2025</a></li>
-</ul>
+    <div class="honors">
+        <ul>
+            <li><div class="card"><a href="https://www.lancaster.ac.uk/lums/news/boylan-prize-honours-much-missed-professor">Boylan Prize 2025</a></div></li>
+        </ul>
+    </div>
+</section>
 
+<section>
 <h2>Projects</h2>
-<ul>
-<li><a href="https://github.com/ahmedkheiri/CoSPLib">Conference Scheduler</a></li>
-<li><a href="https://www.overleaf.com/project/5d7a28a2622edd0001b5d62c">MSc Dissertation</a></li>
-</ul>
+    <div class="projects">
+        <ul>
+            <li><div class="card"><a href="https://github.com/ahmedkheiri/CoSPLib">Conference Scheduler</a></div></li>
+            <li><div class="card"><a href="https://www.overleaf.com/project/5d7a28a2622edd0001b5d62c">MSc Dissertation</a></div></li>
+        </ul>
+    </div>
+</section>
 
+<section>
 <h2>Publications</h2>
-<ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S0377221724002601?via%3Dihub">A generic approach to conference scheduling with integer programming</a></li>
-<li><a href="https://dl.acm.org/doi/pdf/10.1145/3638530.3664186">Efficient Scheduling of GECCO Conferences using Hyper-heuristic Algorithms</a></li>
-<li><a href="https://dl.acm.org/doi/pdf/10.1145/3712255.3726570">CoSPLib - A Benchmark Library for Conference Scheduling Problems</a></li>
-<li><a href="https://dl.acm.org/doi/pdf/10.1145/3717408.3717410">Automated scheduling of GECCO 2023</a></li>
-<li><a href="https://ieeexplore.ieee.org/document/9185803">A reinforcement learning hyper-heuristic for the optimisation of flight connections</a></li>
-</ul>
+    <div class="projects">
+        <ul>
+            <li><div class="card"><a href="https://www.sciencedirect.com/science/article/pii/S0377221724002601?via%3Dihub">A generic approach to conference scheduling with integer programming</a></div></li>
+            <li><div class="card"><a href="https://dl.acm.org/doi/pdf/10.1145/3638530.3664186">Efficient Scheduling of GECCO Conferences using Hyper-heuristic Algorithms</a></div></li>
+            <li><div class="card"><a href="https://dl.acm.org/doi/pdf/10.1145/3712255.3726570">CoSPLib - A Benchmark Library for Conference Scheduling Problems</a></div></li>
+            <li><div class="card"><a href="https://dl.acm.org/doi/pdf/10.1145/3717408.3717410">Automated scheduling of GECCO 2023</a></div></li>
+            <li><div class="card"><a href="https://ieeexplore.ieee.org/document/9185803">A reinforcement learning hyper-heuristic for the optimisation of flight connections</a></div></li>
+        </ul>
+    </div>
+</section>
 
+<section>
 <h2>Interests</h2>
-<ul>
-<li><a href="https://www.lavlewand.xyz/">Photography</a></li>
-<li><a href="https://www.youtube.com/@LavLewand">Music</a></li>
-</ul>
+    <div class="interests">
+        <ul>
+            <li><div class="card"><a href="https://www.lavlewand.xyz/">Photography</a></div></li>
+            <li><div class="card"><a href="https://www.youtube.com/@LavLewand">Music</a></div></li>
+        </ul>
+    </div>
+</section>
 
+<section>
 <h2>Contact</h2>
-<p><a href="https://www.linkedin.com/in/yaroslav-pylyavskyy-aba25014b/">LinkedIn</a> | <a href="https://github.com/pylyavskyy">GitHub</a></p>
+    <div class="contact">
+        <div class="card"><p><a href="https://www.linkedin.com/in/yaroslav-pylyavskyy-aba25014b/">LinkedIn</a> | <a href="https://github.com/pylyavskyy">GitHub</a></p></div>
+    </div>
+</section>
 
 </div>
 
