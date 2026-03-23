@@ -48,7 +48,7 @@ button:hover {
 
 .particle {
     position: absolute;
-    background: rgba(255,255,255,0.08);
+    background: #B2BEB5;
     border-radius: 50%;
     animation: float linear infinite;
 }
@@ -66,12 +66,12 @@ button:hover {
 .card {
     padding: 20px;
     border-radius: 12px;
-    background: rgba(255,255,255,0.08);
+    background: #B2BEB5;
     transition: 0.3s;
 }
 
 .dark-mode .card {
-    background: rgba(255,255,255,0.08);
+    background: #B2BEB5;
 }
 
 /* MOBILE BREAKPOINT */
@@ -204,7 +204,6 @@ function toggleMode() {
         btn.textContent = "🌙";
         localStorage.setItem("theme", "light");
     }
-    updateParticlesColor()
 }
 
     window.addEventListener('load', () => {
@@ -234,14 +233,6 @@ function createParticles() {
 
         container.appendChild(p);
     }
-}
-
-function updateParticlesColor() {
-    const dark = document.body.classList.contains("dark-mode");
-    const particles = document.querySelectorAll(".particle");
-    particles.forEach(p => {
-        p.style.backgroundColor = dark ? "white" : "rgba(255,255,255,0.08)";
-    });
 }
 
 window.onload = function() {
