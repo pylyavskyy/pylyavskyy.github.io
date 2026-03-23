@@ -116,6 +116,10 @@ button:hover {
 
 <button id="themeBtn" onclick="toggleMode()">🌙</button>
 
+<button onclick="window.open('https://www.linkedin.com/in/yaroslav-pylyavskyy-aba25014b/', '_blank')">
+LinkedIn
+</button>
+
 <div class="container">
 
 <h1>Yaroslav Pylyavskyy</h1>
@@ -187,7 +191,6 @@ button:hover {
 <h2>Contact</h2>
     <div class="contact">
         <div class="card"><a href="https://github.com/pylyavskyy">GitHub</a></div>
-        <div class="card"><a href="https://www.linkedin.com/in/yaroslav-pylyavskyy-aba25014b/">LinkedIn</a></div>
     </div>
 </section>
 
@@ -214,14 +217,23 @@ function toggleMode() {
     }
 }
 
-window.onload = function() {
+    window.addEventListener('load', () => {
     const btn = document.getElementById("themeBtn");
-
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark-mode");
         btn.textContent = "☀️";
     }
-}
+    createParticles();
+    });
+
+// window.onload = function() {
+//     const btn = document.getElementById("themeBtn");
+
+//     if (localStorage.getItem("theme") === "dark") {
+//         document.body.classList.add("dark-mode");
+//         btn.textContent = "☀️";
+//     }
+// }
 
 function createParticles() {
     const container = document.getElementById("particles");
